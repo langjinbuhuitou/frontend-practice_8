@@ -28,3 +28,16 @@ planets.forEach(planet => {
     })
     planetContainer.appendChild(card)
 })
+
+// 动态生成简易柱状图 纯CSS+JS实现 不需要图表库
+const chartContainer = document.getElementById("chartContainer")
+const maxSize = Math.max(...planets.map(p => p.size))
+
+planets.forEach(planet => {
+    const bar = document.createElement("div")
+    bar.className = "chart-bar"
+    // 按比例计算柱子高度
+    bar.style.height = `${(planet.size / maxSize) * 250}px`
+    bar.innerHTML = `<span>${planet.name}</span>`
+    chartContainer.appendChild(bar)
+})
