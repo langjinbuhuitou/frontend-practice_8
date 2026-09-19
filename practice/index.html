@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太阳系科普主页</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 语义化头部导航 -->
+    <header>
+        <h1>太阳系科普小站</h1>
+        <nav>
+            <a href="#intro">太阳系介绍</a>
+            <a href="#planets">行星列表</a>
+            <a href="#data">数据对比</a>
+            <a href="solar-3d.html">查看3D太阳系场景</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 模块1：基础介绍模块 -->
+        <section id="intro">
+            <h2>太阳系简介</h2>
+            <p>太阳系是以太阳为中心，和所有受到太阳引力约束的天体的集合体，包含8颗行星、至少173颗已知的卫星、几颗已经辨认出来的矮行星和数以亿计的太阳系小天体。</p>
+            <p>我们这个页面展示了8颗行星的基础信息，你可以点击卡片查看详情，也可以跳转到3D页面查看完整的三维太阳系演示。</p>
+        </section>
+
+        <!-- 模块2：交互行星卡片模块 -->
+        <section id="planets">
+            <h2>八大行星信息</h2>
+            <div class="planet-list" id="planetContainer">
+                <!-- JS动态生成卡片 -->
+            </div>
+            <div id="planetDetail" style="margin-top:1.5rem; padding:1rem; background-color:#475569; border-radius:6px; display:none;">
+                <h3 id="detailName"></h3>
+                <p id="detailInfo"></p>
+            </div>
+        </section>
+
+        <!-- 模块3：数据可视化图表模块 -->
+        <section id="data">
+            <h2>行星相对体积对比</h2>
+            <div class="chart-area" id="chartContainer">
+                <!-- JS动态生成柱状图 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>太阳系前端整合作业</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

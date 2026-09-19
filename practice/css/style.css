@@ -1,0 +1,91 @@
+/* 全局基础样式 课堂基础CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "微软雅黑", sans-serif;
+    background-color: #0f172a;
+    color: #f1f5f9;
+    line-height: 1.6;
+}
+/* 语义化头部 */
+header {
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+}
+nav {
+    margin-top: 1rem;
+}
+nav a {
+    color: #38bdf8;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+/* 主内容区 */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: #1e293b;
+    border-radius: 8px;
+}
+h2 {
+    margin-bottom: 1rem;
+    color: #7dd3fc;
+}
+/* 行星卡片布局 */
+.planet-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+.planet-card {
+    padding: 1rem;
+    background-color: #334155;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.planet-card:hover {
+    transform: translateY(-5px);
+    background-color: #475569;
+}
+/* 图表区域 */
+.chart-area {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+.chart-bar {
+    flex: 1;
+    background-color: #38bdf8;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+.chart-bar span {
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #334155;
+    color: #94a3b8;
+}
